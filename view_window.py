@@ -37,7 +37,7 @@ class PopflixViewApp:
         self.profile_2_small_tk = ImageTk.PhotoImage(profile_2_small)
         self.profile_2_small_button = tk.Button(self.root, image=self.profile_2_small_tk, border=0,
                                                 activebackground="#5825FE", foreground="black",
-                                                bg="black", command=self.open_new_frame)
+                                                bg="black", command=self.open_new_window)
         self.profile_2_small_button.place(relx=.93, rely=0.04)
 
     def setup_genre_buttons(self):
@@ -56,8 +56,8 @@ class PopflixViewApp:
         self.movie_frame = tk.Frame(self.root, bg="black")
         self.movie_frame.place(relx=.12, rely=.23)
 
-    def open_new_frame(self):
-        # Function to open a new frame (profile window)
+    def open_new_window(self):
+        # Function to open a new window (profile window)
         self.root.destroy()
         subprocess.run(["python", "profile_window.py"])
 

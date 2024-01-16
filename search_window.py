@@ -42,7 +42,7 @@ class PopflixSearchApp:
         self.profile_1_small = ImageTk.PhotoImage(profile_1_small_image)
         profile_1_small_button = Button(self.root, image=self.profile_1_small, border=0,
                                         activebackground=self.BLACK, foreground=self.BLACK,
-                                        bg=self.BLACK, command=self.open_new_frame)
+                                        bg=self.BLACK, command=self.open_new_window)
         profile_1_small_button.place(relx=.93, rely=0.044)
 
     def entry_and_search_button(self):
@@ -103,7 +103,7 @@ class PopflixSearchApp:
                                      command=lambda: self.navigate_movies(1))
         self.next_button.place(relx=.93, rely=.89)
 
-    def open_new_frame(self):
+    def open_new_window(self):
         #Open a new frame for profile.
         self.root.destroy()
         subprocess.run(["python", "profile_window.py"])
@@ -172,7 +172,7 @@ class PopflixSearchApp:
 
 # Create the main window
 root = Tk()
-root.title("PopflixSearchApp - Search Window")
+root.title("Popflix - Search Window")
 root.geometry("989x605")
 root.configure(bg='black')
 root.resizable(0, 0)

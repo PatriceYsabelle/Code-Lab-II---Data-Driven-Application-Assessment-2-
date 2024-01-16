@@ -10,12 +10,12 @@ root.configure(bg='black')
 root.resizable(0, 0)
 
 # Function to open a separate file (search window)
-def open_new_frame():
+def open_new_window():
     root.destroy()
     subprocess.run(["python", "search_window.py"])
 
 # Function to open a separate file (view window)
-def open_new_frame_2():
+def open_new_window_2():
     root.destroy()
     subprocess.run(["python", "view_window.py"])
 
@@ -33,13 +33,13 @@ bg_image_profile.place(x=-2, y=-2)
 profile_1 = ImageTk.PhotoImage(Image.open("Asset/profile_1.png"))
 profile_1_button = Button(profile, image=profile_1, border=0, 
                           activebackground="#AA0001", foreground="black", 
-                          bg="black", command=open_new_frame)
+                          bg="black", command=open_new_window)
 profile_1_button.place(relx=.3, rely=.37)
 
 profile_2 = ImageTk.PhotoImage(Image.open("Asset/profile_2.png"))
 profile_2_button = Button(profile, image=profile_2, border=0, 
                           activebackground="#5825FE", foreground="black", 
-                          bg="black", command=open_new_frame_2)
+                          bg="black", command=open_new_window_2)
 profile_2_button.place(relx=.52, rely=.37)
 
 profile.place(x=0, y=0)

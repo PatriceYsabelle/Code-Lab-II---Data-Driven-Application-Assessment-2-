@@ -14,7 +14,7 @@ def show_frame(frame):
     frame.tkraise()
 
 # Function to open a separate file (search window)
-def open_new_frame():
+def open_new_window():
     root.destroy()
     subprocess.run(["python", "profile_window.py"])
 
@@ -48,7 +48,7 @@ bg_image_instructions.place(x=-2, y=-2)
 # Button to navigate to the profile frame
 next_button = Button(instructions, text="Next", bg="red", fg="black", 
                      activebackground="red", font=('Roboto', 13, 'bold'), 
-                     relief="flat", command=open_new_frame)
+                     relief="flat", command=open_new_window)
 next_button.place(relx=.45, rely=.77, width=100, height=45)
 instructions.place(x=0, y=0)
 
